@@ -5,18 +5,26 @@
 
 name:   Geun-Woo D. Kim
 me:     "Kim GW. D."
-email:  gwpia0409@korea.ac.kr
 
-# Shown to the right of the name, in this order.
+# Written out in full above the profile links, not hidden behind a mailto link.
+emails:
+  - gwpia0409@gmail.com
+  - gwpia0409@korea.ac.kr
+
+# Shown under the e-mail line, in this order.
 links:
-  - label: Google Scholar
+  - label: Google Scholar Profile
     url:   "https://scholar.google.com/citations?user=lsfAf-oAAAAJ&hl=en"
   - label: ORCID
     url:   "https://orcid.org/0000-0003-0161-6707"
   - label: CV (PDF)
     url:   "cv.pdf"
-  - label: Email
-    url:   "mailto:gwpia0409@korea.ac.kr"
+
+# Printed small under the publication list. These explain the markers that
+# appear inside the `authors` strings, so they live next to that convention.
+author_notes:
+  - "* co-first authors"
+  - "# co-corresponding authors"
 
 # One paragraph under the name. Left empty on purpose — the section is
 # skipped entirely while this is blank, so the page has no hole in it.

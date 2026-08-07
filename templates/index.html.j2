@@ -13,11 +13,16 @@
 
   <header class="masthead">
     <h1>{{ site.name }}</h1>
-    <nav class="links" aria-label="Profiles and contact">
-      {% for link in site.links %}
-      <a href="{{ link.url }}"{% if link.url.startswith('http') %} rel="me noopener"{% endif %}>{{ link.label }}</a>
-      {% endfor %}
-    </nav>
+    <div class="contact">
+      {% if site.emails %}
+      <p class="emails">Email : {{ site.emails | join(' / ') }}</p>
+      {% endif %}
+      <nav class="links" aria-label="Profiles">
+        {% for link in site.links %}
+        <a href="{{ link.url }}"{% if link.url.startswith('http') %} rel="me noopener"{% endif %}>{{ link.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
   </header>
 
   {% if site.bio %}
@@ -60,6 +65,9 @@
       </li>
       {% endfor %}
     </ul>
+    {% endif %}
+    {% if site.author_notes %}
+    <p class="footnote">{{ site.author_notes | join('   ·   ') }}</p>
     {% endif %}
   </section>
   {% endif %}
@@ -138,7 +146,7 @@
   {% endif %}
 
   <footer>
-    Last updated {{ site.updated }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    Last updated {{ site.updated }}
   </footer>
 
 </main>
