@@ -23,7 +23,7 @@ so there is no CI step — pushing a build publishes it.
 
 ```bash
 # ================== COPY FROM HERE ==================
-cd /mnt/d/GWK_data/Document/gwdkim-site
+cd /mnt/d/GWK_data/Document/git/gwdkim-site
 vi data/publications.yml          # add one record
 python3 build.py                  # prints counts — check them
 git add -A && git commit -m "add paper" && git push
