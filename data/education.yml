@@ -1,4 +1,6 @@
-- degree:  "Ph.D. Program"
+# Degree first, then field — parallel with the M.S. and B.S. lines below.
+# "Ph.D. Program" named the programme rather than the degree, which broke that.
+- degree:  "Ph.D. Candidate, NBIT (Nano-Bio-Information Technology) Convergence Major"
   dept:    "KU-KIST Graduate School of Converging Science and Technology"
   school:  "Korea University"
   period:  "2021–"
