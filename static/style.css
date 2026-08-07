@@ -227,8 +227,6 @@ a.tag:hover{ border-color: var(--accent); }
 /* One .edu-line per fact — school, advisor, note — each on its own row.
    Named for what it is rather than what it holds: "where" stopped being
    true once the advisor and the note moved into it. */
-/* A spelled-out acronym is a footnote to the term, not a peer of it. */
-.abbr{ font-size: .7em; }
 .edu-line{ display: block; font-size: .82rem; color: var(--muted); line-height: 1.5; }
 
 /* ── collapsed presentations ──────────────────────────────── */
