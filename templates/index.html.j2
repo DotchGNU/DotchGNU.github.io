@@ -27,8 +27,12 @@
     </div>
   </header>
 
-  {% if site.bio %}
-  <p class="bio">{{ site.bio }}</p>
+  {% if bio %}
+  <div class="bio">
+    {% for para in bio %}
+    <p>{{ para }}</p>
+    {% endfor %}
+  </div>
   {% endif %}
 
   {% if first or co %}

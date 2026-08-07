@@ -35,9 +35,12 @@ Nothing in `templates/` or `static/` needs touching. The same applies to
 
 ## Conventions
 
-- **Never write `<span class="me">` by hand.** `data/site.yml` holds the author's
-  own name once, as `me`; `build.py` finds it in every author list and marks it.
-  Change the preferred rendering there and it changes everywhere.
+- **No HTML in the data files.** `data/site.yml` holds the author's own name once,
+  as `me`; `build.py` finds it in every author list and wraps it in
+  `<span class="me">`. The bio works the same way: `bio` is a list of plain
+  paragraphs and `bio_links` maps a phrase to a URL, which `build.py` turns into
+  an anchor on its first occurrence. Reword a phrase there and the link follows
+  it; write `<a href>` into the YAML and it will be escaped and shown literally.
 - **Never hand-count anything shown on the page.** The `Presentations (N)`
   count comes from `talks|length`.
 - `doi` fields are bare DOIs — no `https://doi.org/` prefix. The template adds it.

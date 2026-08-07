@@ -27,9 +27,27 @@ author_notes:
   - "* co-first authors"
   - "# co-corresponding authors"
 
-# One paragraph under the name. Left empty on purpose — the section is
-# skipped entirely while this is blank, so the page has no hole in it.
-bio: ""
+# One list item per paragraph. Leave the list empty and the whole block is
+# skipped, so the page has no hole in it.
+bio:
+  - >-
+    I'm a Ph.D. candidate in Sung Wook Chi's lab at Korea University. I started
+    out in the lab filming mice because I can't trust my own eyes, and found a
+    pattern I hadn't been looking for.
+  - >-
+    Since then I've worked on RNA modifications, from mammalian cells to
+    bacteria, and I keep learning the same lesson: the part of biology we can't
+    measure is absurdly larger than the part we can. Which is also why I'm not
+    worried about AI taking my job.
+  - >-
+    My guess is that the bottleneck for AI in biology is data rather than
+    architecture, and that the data still has to be made at a bench.
+
+# Phrases in `bio` that become links. Same idea as `me` above: the prose stays
+# free of markup and build.py does the wrapping, so a phrase can be reworded
+# here without touching the template. First occurrence only.
+bio_links:
+  "Sung Wook Chi's lab": "http://clip.korea.ac.kr/"
 
 # Footer
 updated: "August 2026"

@@ -113,7 +113,10 @@ a:focus-visible{ outline: 2px solid var(--crimson); outline-offset: 3px; border-
   font-size: .82rem;
 }
 
-.bio{ margin: 0; max-width: 34rem; }
+/* ~68 characters per line at this size — long enough to hold a thought,
+   short enough that the eye finds the next line without hunting. */
+.bio{ display: flex; flex-direction: column; gap: .75rem; max-width: 34rem; }
+.bio p{ margin: 0; }
 
 /* ── sections ─────────────────────────────────────────────── */
 section{ display: flex; flex-direction: column; gap: .9rem; }

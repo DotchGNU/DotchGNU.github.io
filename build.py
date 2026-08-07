@@ -48,6 +48,24 @@ def highlight_me(authors, me):
     return Markup(marked)
 
 
+def render_bio(paragraphs, links):
+    """Escape the bio, then link the first occurrence of each mapped phrase.
+
+    Same contract as highlight_me: data files hold prose, never markup. Phrases
+    are matched AFTER escaping, so apostrophes in a phrase still match.
+    """
+    if isinstance(paragraphs, str):
+        paragraphs = [paragraphs] if paragraphs.strip() else []
+    rendered = []
+    for para in paragraphs:
+        text = html.escape(para or "")
+        for phrase, url in (links or {}).items():
+            anchor = f'<a href="{html.escape(url)}">\\g<0></a>'
+            text = re.sub(re.escape(html.escape(phrase)), anchor, text, count=1)
+        rendered.append(Markup(text))
+    return rendered
+
+
 def main():
     data = {name: (load(name) or ([] if name != "site" else {})) for name in DATA_FILES}
     site = data["site"]
@@ -71,8 +89,10 @@ def main():
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    bio = render_bio(site.get("bio"), site.get("bio_links"))
+
     rendered = env.get_template("index.html.j2").render(
-        site=site, first=first, co=co, talks=talks,
+        site=site, bio=bio, first=first, co=co, talks=talks,
         resources=data["resources"], awards=data["awards"], education=data["education"],
     )
 
@@ -93,9 +113,9 @@ def main():
     print(f"  resources      {len(data['resources'])}")
     print(f"  awards         {len(data['awards'])}")
     print(f"  presentations  {len(talks)}")
+    print(f"  bio            {len(bio)} paragraph(s)"
+          f"{'' if bio else ' — block omitted'}")
     print(f"  custom domain  {CUSTOM_DOMAIN or '(none — serving on github.io)'}")
-    if not site.get("bio"):
-        print("  note: bio is empty, so the intro paragraph is omitted")
 
 
 if __name__ == "__main__":
