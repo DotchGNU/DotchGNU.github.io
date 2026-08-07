@@ -57,14 +57,21 @@ python3 -c "import yaml, jinja2; print('ok')"
 
 ## Custom domain
 
-`CUSTOM_DOMAIN` at the top of `build.py` is empty on purpose. Set it to
-`gwdkim.com` **only after** the domain is registered and its DNS points at
-GitHub Pages:
+Live at **https://gwdkim.com** since 2026-08-07. `dotchgnu.github.io` redirects
+to it. The certificate (Let's Encrypt, via GitHub) covers both `gwdkim.com` and
+`www.gwdkim.com` and renews automatically.
+
+`CUSTOM_DOMAIN` at the top of `build.py` writes `docs/CNAME`, which is what
+GitHub reads. Registered at Cloudflare; DNS is nine records, all **DNS only**
+(grey cloud — proxying them blocks GitHub's certificate issuance):
 
 ```
 A      @     185.199.108.153  185.199.109.153  185.199.110.153  185.199.111.153
+AAAA   @     2606:50c0:8000::153  ::8001::153  ::8002::153  ::8003::153
 CNAME  www   dotchgnu.github.io
 ```
 
-Writing a `CNAME` file for a domain that does not resolve yet makes GitHub
-redirect `dotchgnu.github.io` to it, which takes the site offline.
+**Order matters if this is ever redone.** Point DNS first and confirm it
+resolves; only then set `CUSTOM_DOMAIN`. Writing a `CNAME` file for a name that
+does not resolve yet makes GitHub redirect the .github.io address to it, which
+takes the site offline with no obvious cause.
