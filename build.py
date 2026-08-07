@@ -67,6 +67,30 @@ def render_bio(paragraphs, links):
     return rendered
 
 
+ANCHOR = re.compile(r"<a\s+([^>]*)>")
+
+
+def open_externally(markup):
+    """Send every off-site link to a new tab, and keep the tab it came from safe.
+
+    Applied to the whole rendered page rather than written into each anchor, so
+    a link added later cannot be forgotten. The pattern matches the attribute
+    list rather than assuming href comes first — the doi tags carry a class
+    before it. rel is merged, not replaced, so the profile links keep rel="me".
+    noopener stops the opened page from reaching back through window.opener;
+    modern browsers imply it for target="_blank", older ones do not.
+    """
+    def fix(m):
+        attrs = m.group(1)
+        if not re.search(r'href="https?://', attrs) or "target=" in attrs:
+            return m.group(0)
+        rel = re.search(r'rel="([^"]*)"', attrs)
+        tokens = set((rel.group(1) if rel else "").split()) | {"noopener"}
+        attrs = re.sub(r'\s*rel="[^"]*"', "", attrs).strip()
+        return f'<a {attrs} target="_blank" rel="{" ".join(sorted(tokens))}">'
+    return ANCHOR.sub(fix, markup)
+
+
 def main():
     data = {name: (load(name) or ([] if name != "site" else {})) for name in DATA_FILES}
     site = data["site"]
@@ -103,6 +127,8 @@ def main():
         resources=data["resources"], awards=data["awards"], education=data["education"],
     )
 
+    rendered = open_externally(rendered)
+
     OUT.mkdir(exist_ok=True)
     (OUT / "index.html").write_text(rendered, encoding="utf-8")
     for item in sorted(STATIC.iterdir()):
@@ -120,6 +146,7 @@ def main():
     print(f"  resources      {len(data['resources'])}")
     print(f"  awards         {len(data['awards'])}")
     print(f"  presentations  {len(talks)}")
+    print(f"  external links {rendered.count('target=\"_blank\"')} open in a new tab")
     print(f"  stylesheet     style.css?v={css_v}")
     print(f"  bio            {len(bio)} paragraph(s)"
           f"{'' if bio else ' — block omitted'}")
