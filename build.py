@@ -38,15 +38,23 @@ def load(name):
 def highlight_me(authors, me):
     """Escape an author list, then wrap every occurrence of the owner's name.
 
-    The name lives in data/site.yml as `me`. Author lists never carry markup,
-    so changing the preferred rendering is a one-line edit there.
+    `me` in data/site.yml is a list because the same person is written two ways
+    here: publications follow the CV ("Kim GW. D."), conference listings use the
+    full name. Highlighting only the form that happened to match would colour
+    two of nine talks and look like a mistake. Longest first, so a short form
+    cannot claim part of a longer one.
     """
     escaped = html.escape(authors or "")
-    if not me:
+    forms = sorted(filter(None, [me] if isinstance(me, str) else list(me or [])),
+                   key=len, reverse=True)
+    if not forms:
         return Markup(escaped)
-    marked = re.sub(re.escape(html.escape(me)),
-                    r'<span class="me">\g<0></span>', escaped)
-    return Markup(marked)
+    # ONE pass, longest form first. Substituting form by form would let a short
+    # form ("Kim GW") match inside the markup a longer one had just inserted
+    # ("<span class=\"me\">Kim GW. D.</span>") and nest the spans.
+    pattern = "|".join(re.escape(html.escape(f)) for f in forms)
+    escaped = re.sub(pattern, r'<span class="me">\g<0></span>', escaped)
+    return Markup(escaped)
 
 
 def render_bio(paragraphs, links):

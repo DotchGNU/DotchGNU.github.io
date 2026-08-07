@@ -4,7 +4,10 @@
 # If the preferred rendering ever changes, change it here only.
 
 name:   Geun-Woo D. Kim
-me:     "Kim GW. D."
+me:                                # 두 표기를 다 쓴다: 논문은 CV 서식, 발표는 전체 이름
+  - "Kim GW. D."
+  - "Geun-Woo D. Kim"
+  - "Kim GW"                       # 2018 포스터 하나가 이 형태다
 
 # Written out in full above the profile links, not hidden behind a mailto link.
 # Keep this to ONE address: the masthead puts the name and this block on the
