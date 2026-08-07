@@ -1,8 +1,29 @@
-# Public tools, databases, and datasets. `paper` is optional and links to the
-# publication that describes the resource.
+# Public tools, pipelines and datasets — things someone else can pick up and use.
+#
+# `links` is a list so a resource can point at as many places as it has: code,
+# archived release, running service, the paper describing it. Labels are short
+# lowercase nouns, matching the doi tags in the publication list.
+#
+# Papers are linked by DOI rather than by publisher URL. A DOI does not move.
 
 - name:  "abCRISPR"
   blurb: "Deep learning-based design resource for abasic gRNAs, providing genome-wide off-target predictions across the human genome."
-  url:   "http://clip.korea.ac.kr/abCRISPR/"
-  label: "web server"
-  paper: "10.1093/bioinformatics/btag568"
+  links:
+    - label: "web server"
+      url:   "http://clip.korea.ac.kr/abCRISPR/"
+    - label: "github"
+      url:   "https://github.com/DotchGNU/abCRISPR"
+    - label: "zenodo"
+      url:   "https://zenodo.org/doi/10.5281/zenodo.20398246"
+    - label: "paper"
+      url:   "https://doi.org/10.1093/bioinformatics/btag568"
+
+- name:  "crRNA-seq"
+  blurb: "crRNA-seq analysis pipeline."
+  links:
+    - label: "github"
+      url:   "https://github.com/DotchGNU/crRNA-seq"
+    - label: "zenodo"
+      url:   "https://zenodo.org/records/17762942"
+    - label: "paper"
+      url:   "https://doi.org/10.1038/s41589-026-02139-8"

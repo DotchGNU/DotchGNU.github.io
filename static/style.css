@@ -182,6 +182,7 @@ h3{
 
 .tag{
   display: inline-block;
+  margin-right: .25rem;
   font-size: .68rem;
   letter-spacing: .06em;
   text-transform: uppercase;

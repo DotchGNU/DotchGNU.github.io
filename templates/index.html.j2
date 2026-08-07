@@ -80,15 +80,14 @@
 
   {% if resources %}
   <section>
-    <h2>Research Resources</h2>
+    <h2>Resources</h2>
     <ul class="entries">
       {% for r in resources %}
       <li>
         <p class="title">{{ r.name }}</p>
         <p class="venue">
           {{ r.blurb }}
-          <a class="tag" href="{{ r.url }}">{{ r.label }}</a>
-          {% if r.paper %}<a class="tag" href="https://doi.org/{{ r.paper }}">doi</a>{% endif %}
+          {% for l in r.links %}<a class="tag" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
         </p>
       </li>
       {% endfor %}
