@@ -139,6 +139,18 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-r
   background: var(--panel);
   padding: 1.2rem 1.35rem;
   border-radius: 2px;
+
+  /* Georgia italic gives the introduction a diary voice against the sans-serif
+     record below. Named directly rather than via --serif, which deliberately
+     resolves to a different face per platform (Iowan Old Style on macOS,
+     Palatino Linotype on Windows) — here the point is that it look the same
+     everywhere. Georgia ships on Windows, macOS, iOS and most Android builds,
+     and its italic is drawn, not slanted. Set a hair below 1rem because
+     Georgia's x-height runs large next to the body sans. */
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: .97rem;
+  line-height: 1.68;
 }
 .bio p{ margin: 0; }
 
