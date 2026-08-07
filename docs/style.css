@@ -139,27 +139,6 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-r
   background: var(--panel);
   padding: 1.2rem 1.35rem;
   border-radius: 2px;
-
-  /* A typewriter voice for the introduction, against the sans-serif record
-     below. The generic family is used on purpose rather than a named face:
-     naming Consolas would pin the look on Windows and fall back unpredictably
-     elsewhere, whereas every platform maps `monospace` to something
-     (Consolas / Menlo / DejaVu Sans Mono / Roboto Mono / SF Mono) and the one
-     property that matters here — every character the same width — survives the
-     substitution.
-
-     Written twice on purpose. Browsers keep a separate, smaller default size
-     for the bare `monospace` generic (13px against the usual 16px), so
-     `font-family: monospace` alone silently shrinks the text. A two-item list
-     is read as a list rather than a generic and skips that rule; the same
-     workaround is in normalize.css.
-
-     Sized down a little because monospace runs wide: at the body size the line
-     would overrun a comfortable measure. */
-  font-family: monospace, monospace;
-  font-style: italic;
-  font-size: .93rem;
-  line-height: 1.7;
 }
 .bio p{ margin: 0; }
 
