@@ -2,10 +2,6 @@
 
 Personal academic homepage. Static, single page, no framework.
 
-Design rationale, discarded alternatives, and open questions live in the
-Obsidian vault, not here:
-`obsidian://open?vault=notes&file=Writing%2Fhomepage%2Fgwdkim-site-design`
-
 ## Layout
 
 ```
@@ -23,7 +19,7 @@ so there is no CI step — pushing a build publishes it.
 
 ```bash
 # ================== COPY FROM HERE ==================
-cd /mnt/d/GWK_data/Document/git/gwdkim-site
+cd path/to/gwdkim-site
 vi data/publications.yml          # add one record
 python3 build.py                  # prints counts — check them
 git add -A && git commit -m "add paper" && git push
