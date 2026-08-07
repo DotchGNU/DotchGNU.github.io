@@ -140,17 +140,21 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-r
   padding: 1.2rem 1.35rem;
   border-radius: 2px;
 
-  /* Georgia italic gives the introduction a diary voice against the sans-serif
-     record below. Named directly rather than via --serif, which deliberately
-     resolves to a different face per platform (Iowan Old Style on macOS,
-     Palatino Linotype on Windows) — here the point is that it look the same
-     everywhere. Georgia ships on Windows, macOS, iOS and most Android builds,
-     and its italic is drawn, not slanted. Set a hair below 1rem because
-     Georgia's x-height runs large next to the body sans. */
-  font-family: Georgia, "Times New Roman", serif;
+  /* Italic --serif: a diary voice against the sans-serif record below, and the
+     same face the journal names use, so the introduction is tied to the list
+     rather than floating above it in a font of its own.
+
+     --serif resolves differently per platform (Palatino Linotype on Windows,
+     Iowan Old Style on macOS, Palatino on iOS, Georgia further down), but every
+     entry is an old-style serif with a drawn italic, so the character holds even
+     where the exact face does not. Georgia alone would be more uniform and less
+     right: bigger x-height, sturdier strokes, a firmer voice than this wants.
+
+     Slightly larger than the body text because Palatino's x-height runs small. */
+  font-family: var(--serif);
   font-style: italic;
-  font-size: .97rem;
-  line-height: 1.68;
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 .bio p{ margin: 0; }
 

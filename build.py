@@ -13,6 +13,7 @@ CUSTOM_DOMAIN = "gwdkim.com"  # DNS verified live 2026-08-07; see README before 
 DATA_FILES = ["site", "publications", "resources", "awards", "talks", "education"]
 # ── logic (below uses only the values above) ────────────────────────────
 
+import hashlib
 import html
 import re
 import shutil
@@ -91,8 +92,14 @@ def main():
     )
     bio = render_bio(site.get("bio"), site.get("bio_links"))
 
+    # Cache-bust the stylesheet. Browsers hold on to style.css, so a visitor can
+    # end up with new markup and an old stylesheet — which is invisible until a
+    # class is renamed, and then the page silently loses every rule that used
+    # the old name. Keying the URL to the file's content makes that impossible.
+    css_v = hashlib.md5((STATIC / "style.css").read_bytes()).hexdigest()[:8]
+
     rendered = env.get_template("index.html.j2").render(
-        site=site, bio=bio, first=first, co=co, talks=talks,
+        site=site, bio=bio, first=first, co=co, talks=talks, css_v=css_v,
         resources=data["resources"], awards=data["awards"], education=data["education"],
     )
 
@@ -113,6 +120,7 @@ def main():
     print(f"  resources      {len(data['resources'])}")
     print(f"  awards         {len(data['awards'])}")
     print(f"  presentations  {len(talks)}")
+    print(f"  stylesheet     style.css?v={css_v}")
     print(f"  bio            {len(bio)} paragraph(s)"
           f"{'' if bio else ' — block omitted'}")
     print(f"  custom domain  {CUSTOM_DOMAIN or '(none — serving on github.io)'}")
