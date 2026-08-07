@@ -18,7 +18,11 @@
                                 and the footnote below WCAG AA at this size. */
   --rule:         #E2E2E2;
   --bg:           #FFFFFF;
-  --panel:        #F9F1EF;   /* bio ground — dusty pale red, 1.11:1 on white */
+  --panel:        #FCF7F6;   /* bio ground — 1.06:1 on white. Paler than it
+                                looks safe to go: red minus blue is only 6, so
+                                the tint reads as a warm ground rather than as
+                                pink. Widening that gap is what made an earlier
+                                value feel vivid, not the darkness. */
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -33,7 +37,7 @@
     --muted:        #8E8E8E;
     --rule:         #2E2E2E;
     --bg:           #121212;
-    --panel:        #1C1818;   /* same dusty-red cast, inverted */
+    --panel:        #1B1717;   /* same faint warm cast, inverted */
   }
 }
 
