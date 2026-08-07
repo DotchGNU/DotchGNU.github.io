@@ -67,6 +67,20 @@ def render_bio(paragraphs, links):
     return rendered
 
 
+ABBR = re.compile(r"\(([^)]*)\)")
+
+
+def mark_abbr(text):
+    """Set a parenthetical expansion smaller than the term it explains.
+
+    "NBIT (Nano-Bio-Information Technology)" should read as one label, not two
+    competing ones. The data files stay free of markup; the convention is
+    applied here.
+    """
+    return Markup(ABBR.sub(lambda m: f'<span class="abbr">({m.group(1)})</span>',
+                           html.escape(text or "")))
+
+
 def main():
     data = {name: (load(name) or ([] if name != "site" else {})) for name in DATA_FILES}
     site = data["site"]
@@ -90,6 +104,9 @@ def main():
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    for e in data["education"]:
+        e["degree_html"] = mark_abbr(e.get("degree"))
+
     bio = render_bio(site.get("bio"), site.get("bio_links"))
 
     # Cache-bust the stylesheet. Browsers hold on to style.css, so a visitor can

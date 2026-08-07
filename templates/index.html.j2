@@ -144,8 +144,8 @@
          would be pushed onto its own row, which is what used to happen. #}
       <li>
         <span class="edu-body">
-          <span class="edu-degree">{{ e.degree }}</span>
-          <span class="edu-line">{{ e.dept }} · {{ e.school }}</span>
+          <span class="edu-degree">{{ e.degree_html }}</span>
+          <span class="edu-line">{% if e.dept %}{{ e.dept }} · {% endif %}{{ e.school }}</span>
           {% if e.advisor %}<span class="edu-line">Advisor: {{ e.advisor }}</span>{% endif %}
           {% if e.note %}<span class="edu-line">{{ e.note }}</span>{% endif %}
         </span>
