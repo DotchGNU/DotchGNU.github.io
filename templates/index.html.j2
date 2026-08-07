@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.name }}</title>
+<meta name="description" content="{{ site.name }} — RNA modification, CRISPR specificity, and datasets built for machine learning.">
+<meta name="author" content="{{ site.name }}">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+  <header class="masthead">
+    <h1>{{ site.name }}</h1>
+    <nav class="links" aria-label="Profiles and contact">
+      {% for link in site.links %}
+      <a href="{{ link.url }}"{% if link.url.startswith('http') %} rel="me noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+
+  {% if site.bio %}
+  <p class="bio">{{ site.bio }}</p>
+  {% endif %}
+
+  {% if first or co %}
+  <section>
+    <h2>Publications</h2>
+    {% if first %}
+    <h3>First-author</h3>
+    <ul class="entries">
+      {% for p in first %}
+      <li>
+        <p class="title">{{ p.title }}</p>
+        <p class="authors">{{ p.authors_html }}</p>
+        <p class="venue">
+          <em>{{ p.venue }}</em>{% if p.detail %} {{ p.detail }}{% endif %} ({{ p.year }})
+          {% if p.doi %}<a class="tag" href="https://doi.org/{{ p.doi }}">doi</a>
+          {% elif p.status == 'in-press' %}<span class="tag tag--quiet">in press</span>
+          {% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if co %}
+    <h3>Co-authored</h3>
+    <ul class="entries">
+      {% for p in co %}
+      <li>
+        <p class="title">{{ p.title }}</p>
+        <p class="authors">{{ p.authors_html }}</p>
+        <p class="venue">
+          <em>{{ p.venue }}</em>{% if p.detail %} {{ p.detail }}{% endif %} ({{ p.year }})
+          {% if p.doi %}<a class="tag" href="https://doi.org/{{ p.doi }}">doi</a>
+          {% elif p.status == 'in-press' %}<span class="tag tag--quiet">in press</span>
+          {% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if resources %}
+  <section>
+    <h2>Research Resources</h2>
+    <ul class="entries">
+      {% for r in resources %}
+      <li>
+        <p class="title">{{ r.name }}</p>
+        <p class="venue">
+          {{ r.blurb }}
+          <a class="tag" href="{{ r.url }}">{{ r.label }}</a>
+          {% if r.paper %}<a class="tag" href="https://doi.org/{{ r.paper }}">doi</a>{% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if awards %}
+  <section>
+    <h2>Awards</h2>
+    <ul class="awards">
+      {% for a in awards %}
+      <li>
+        <span class="award-body">
+          {% if a.url %}<a href="{{ a.url }}">{{ a.title }}</a>{% else %}{{ a.title }}{% endif %}
+          {% if a.detail %}<span class="award-detail">{{ a.detail }}</span>{% endif %}
+        </span>
+        <time>{{ a.year }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if talks %}
+  <section>
+    <details>
+      <summary>Presentations ({{ talks|length }})</summary>
+      <ul class="entries entries--tight">
+        {% for t in talks %}
+        <li>
+          <p class="title">{{ t.title }}</p>
+          <p class="authors">{{ t.authors_html }}</p>
+          <p class="venue">
+            {{ t.venue }} ({{ t.year }})
+            <span class="tag tag--quiet">{{ t.kind }}</span>
+            {% if t.note %}<span class="tag">{{ t.note }}</span>{% endif %}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+  </section>
+  {% endif %}
+
+  {% if education %}
+  <section>
+    <h2>Education</h2>
+    <ul class="edu">
+      {% for e in education %}
+      <li>
+        <span class="edu-degree">{{ e.degree }}</span>
+        <span class="edu-where">
+          {{ e.dept }} · {{ e.school }}{% if e.advisor %} · Advisor: {{ e.advisor }}{% endif %}{% if e.note %} · {{ e.note }}{% endif %}
+        </span>
+        <time>{{ e.period }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <footer>
+    Last updated {{ site.updated }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </footer>
+
+</main>
+</body>
+</html>

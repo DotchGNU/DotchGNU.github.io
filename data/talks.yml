@@ -1,0 +1,59 @@
+# kind: oral | poster
+# `note` is optional (prize, award at the meeting).
+# The count shown in the collapsed summary is computed, never written by hand.
+
+- kind:    oral
+  title:   "Deep-learning based design of abasic gRNAs for specific CRISPR-Cas9 genome editing"
+  authors: "Geun-Woo D. Kim"
+  venue:   "BIOINFO 2025 — Annual Conference of the Korean Society for Bioinformatics"
+  year:    2025
+
+- kind:    poster
+  title:   "Deep learning-based design of bio-inspired abasic gRNAs for specific CRISPR-Cas9 genome editing"
+  authors: "Geun-Woo D. Kim*, Dowoon Gu*, … Sung Wook Chi"
+  venue:   "Keystone Symposia 2026 — Precision Genome Engineering"
+  year:    2026
+
+- kind:    poster
+  title:   "Hypoxic preconditioning-induced cardiac miRNA protects against asphyxia"
+  authors: "Haban Weon*, Geun-Woo D. Kim*, Hye-Sook Lee, and Sung Wook Chi"
+  venue:   "KSMCB 2025 — Korean Society for Molecular and Cellular Biology"
+  year:    2025
+  note:    "Best Poster Presentation"
+
+- kind:    poster
+  title:   "Abasic CRISPR RNAs inherently harness fidelity of SpCas9 for genome editing"
+  authors: "Geun-Woo D. Kim*, Dowoon Gu*, … Sung Wook Chi"
+  venue:   "BIOINFO 2024 — Korean Society for Bioinformatics"
+  year:    2024
+  note:    "Excellent Poster Presentation"
+
+- kind:    poster
+  title:   "Widespread expression of tRNA-derived small RNAs regulate gene silencing in cancer"
+  authors: "Dong Chan Lee, Hye-Sook Lee, Geun-Woo D. Kim, Seung Hyun Ahn and Sung Wook Chi"
+  venue:   "The 31st International KOGO Annual Conference"
+  year:    2022
+
+- kind:    poster
+  title:   "Redox-mediated redirection of miRNA target recognition in cardiac hypertrophy"
+  authors: "Heeyoung Seok, Haejeong Lee, … Geun-Woo D. Kim, … Sung Wook Chi"
+  venue:   "KSMCB Winter Conference"
+  year:    2020
+
+- kind:    poster
+  title:   "Function of miRNA-induced cardiac remodeling for asphyxial death"
+  authors: "Geun-Woo D. Kim, Sohyun Park, Sung Wook Chi"
+  venue:   "Undergraduate poster session, Division of Life Sciences, Korea University (fall)"
+  year:    2019
+
+- kind:    poster
+  title:   "Function of miRNA-induced cardiac remodeling for asphyxial death"
+  authors: "Geun-Woo D. Kim, Sohyun Park, Sung Wook Chi"
+  venue:   "Undergraduate poster session, Division of Life Sciences, Korea University (spring)"
+  year:    2019
+
+- kind:    poster
+  title:   "Ectopic induction of noncanonical target repression of miR-1 in mouse heart develops cardiac hypertrophy"
+  authors: "Sohyun Lee, Heeyoung Seok, … Geun-Woo D. Kim, Sung Wook Chi"
+  venue:   "RNA Biology, Cold Spring Harbor Asia Conference"
+  year:    2018

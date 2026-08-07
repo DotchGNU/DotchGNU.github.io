@@ -1,0 +1,26 @@
+# Identity, header links, and the intro paragraph.
+# `me` is the one place the author's own name is written. build.py finds this
+# string in every author list and wraps it in <span class="me">.
+# If the preferred rendering ever changes, change it here only.
+
+name:   Geun-Woo D. Kim
+me:     "Kim GW. D."
+email:  gwpia0409@korea.ac.kr
+
+# Shown to the right of the name, in this order.
+links:
+  - label: Google Scholar
+    url:   "https://scholar.google.com/citations?user=lsfAf-oAAAAJ&hl=en"
+  - label: ORCID
+    url:   "https://orcid.org/0000-0003-0161-6707"
+  - label: CV (PDF)
+    url:   "cv.pdf"
+  - label: Email
+    url:   "mailto:gwpia0409@korea.ac.kr"
+
+# One paragraph under the name. Left empty on purpose — the section is
+# skipped entirely while this is blank, so the page has no hole in it.
+bio: ""
+
+# Footer
+updated: "August 2026"

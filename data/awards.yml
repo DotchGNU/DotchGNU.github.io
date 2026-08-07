@@ -1,0 +1,42 @@
+# `url` is optional — omit it and the entry renders as plain text.
+
+- title:  "Gold Prize, The 32nd Samsung HumanTech Paper Awards"
+  detail: "1st place, Bio Engineering & Life Science · Samsung Advanced Institute of Technology"
+  year:   "2026"
+  url:    "https://humantech.samsung.com/"
+
+- title:  "Basic Science Research Program (Fellowship for Ph.D. Program)"
+  detail: "National Research Foundation of Korea"
+  year:   "2022–24"
+
+- title:  "JW Lee Jong-Ho Foundation Scholarship for Basic Scientists"
+  detail: "JW Foundation"
+  year:   "2023–25"
+
+- title:  "Best Paper Award"
+  detail: "KU-KIST Graduate School of Converging Science and Technology"
+  year:   "2025"
+
+- title:  "Graduate Students Fellowship"
+  detail: "KU-KIST Graduate School of Converging Science and Technology"
+  year:   "2021–23"
+
+- title:  "Outstanding Graduate Students Fellowship"
+  detail: "Korea University"
+  year:   "2021–22"
+
+- title:  "Brain Korea 21 Scholarship"
+  detail: "Ministry of Education and National Research Foundation of Korea"
+  year:   "2020–21"
+
+- title:  "Special Scholarship (merit-based)"
+  detail: "Korea University"
+  year:   "2018–19"
+
+- title:  "Academic Excellence Award"
+  detail: "Korea University"
+  year:   "2018–19"
+
+- title:  "Dream-challenger Scholarship"
+  detail: "Korea Student Aid Foundation"
+  year:   "2014"

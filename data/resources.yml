@@ -1,0 +1,8 @@
+# Public tools, databases, and datasets. `paper` is optional and links to the
+# publication that describes the resource.
+
+- name:  "abCRISPR"
+  blurb: "Deep learning-based design resource for abasic gRNAs, providing genome-wide off-target predictions across the human genome."
+  url:   "http://clip.korea.ac.kr/abCRISPR/"
+  label: "web server"
+  paper: "10.1093/bioinformatics/btag568"

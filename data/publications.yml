@@ -1,0 +1,55 @@
+# role:   first | co      → splits the list into two groups
+# status: published | in-press
+# doi:    bare DOI, no https:// prefix. Omit if none.
+#
+# `authors` is the display string. Long lists are shortened with "…" but the
+# author's own name is always kept visible — build.py colours it automatically.
+
+- title:   "Dysregulated m6A deposition via compensatory arginine methylation primes premalignancy in metabolic dysfunction-associated steatotic liver disease"
+  authors: "Kim GW. D.*, Choi D.*, Kim S.-Y.*, … Chi S. W.#, and Koo S.-H.#"
+  venue:   "Science Advances"
+  year:    2026
+  role:    first
+  status:  in-press
+
+- title:   "Abasic CRISPR RNAs inherently harness fidelity of SpCas9 for genome editing"
+  authors: "Gu D.*, Kim GW. D.*, Park M., … Jang E.-S., and Chi S. W."
+  venue:   "Nature Chemical Biology"
+  year:    2026
+  role:    first
+  status:  published
+  doi:     "10.1038/s41589-026-02139-8"
+
+- title:   "abCRISPR: deep learning-based design of abasic gRNAs for specific genome editing using high-quality mismatch library data"
+  authors: "Kim GW. D., Gu D., Park M. and Chi S. W."
+  venue:   "Bioinformatics"
+  year:    2026
+  role:    first
+  status:  published
+  doi:     "10.1093/bioinformatics/btag568"
+
+- title:   "Excessive epithelial mechanosensation drives nociceptive innervation and chronic bladder pain via the PIEZO1-SLC7A11-glutamate axis"
+  authors: "Kim M. J., Noh J. H., Lee H. Y., … Kim GW. D., … Chi S. W., and Choi H. W."
+  venue:   "Cell"
+  year:    2026
+  role:    co
+  status:  published
+  doi:     "10.1016/j.cell.2026.05.049"
+
+- title:   "Widespread 8-oxoguanine modifications of miRNA seeds differentially regulate redox-dependent cancer development"
+  authors: "Eom S.*, Peak J.*, Park J.*, Ahn S. H.*, … Kim GW. D., … Jang E.-S. and Chi S. W."
+  venue:   "Nature Cell Biology"
+  detail:  "25, 1369–1383"
+  year:    2023
+  role:    co
+  status:  published
+  doi:     "10.1038/s41556-023-01209-6"
+
+- title:   "Position-specific oxidation of miR-1 encodes cardiac hypertrophy"
+  authors: "Seok H., Lee H., Lee S., Ahn S. H., Lee H.-S., Kim GW. D., … Jang E.-S., and Chi S. W."
+  venue:   "Nature"
+  detail:  "584, 279–285"
+  year:    2020
+  role:    co
+  status:  published
+  doi:     "10.1038/s41586-020-2586-0"
