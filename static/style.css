@@ -140,20 +140,25 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-r
   padding: 1.2rem 1.35rem;
   border-radius: 2px;
 
-  /* Italic --serif: a diary voice against the sans-serif record below, and the
-     same face the journal names use, so the introduction is tied to the list
-     rather than floating above it in a font of its own.
+  /* A typewriter voice for the introduction, against the sans-serif record
+     below. The generic family is used on purpose rather than a named face:
+     naming Consolas would pin the look on Windows and fall back unpredictably
+     elsewhere, whereas every platform maps `monospace` to something
+     (Consolas / Menlo / DejaVu Sans Mono / Roboto Mono / SF Mono) and the one
+     property that matters here — every character the same width — survives the
+     substitution.
 
-     --serif resolves differently per platform (Palatino Linotype on Windows,
-     Iowan Old Style on macOS, Palatino on iOS, Georgia further down), but every
-     entry is an old-style serif with a drawn italic, so the character holds even
-     where the exact face does not. Georgia alone would be more uniform and less
-     right: bigger x-height, sturdier strokes, a firmer voice than this wants.
+     Written twice on purpose. Browsers keep a separate, smaller default size
+     for the bare `monospace` generic (13px against the usual 16px), so
+     `font-family: monospace` alone silently shrinks the text. A two-item list
+     is read as a list rather than a generic and skips that rule; the same
+     workaround is in normalize.css.
 
-     Slightly larger than the body text because Palatino's x-height runs small. */
-  font-family: var(--serif);
+     Sized down a little because monospace runs wide: at the body size the line
+     would overrun a comfortable measure. */
+  font-family: monospace, monospace;
   font-style: italic;
-  font-size: 1.02rem;
+  font-size: .93rem;
   line-height: 1.7;
 }
 .bio p{ margin: 0; }
