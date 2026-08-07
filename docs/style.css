@@ -218,8 +218,11 @@ a.tag:hover{ border-color: var(--accent); }
 
 /* ── education ────────────────────────────────────────────── */
 .edu{ margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+/* Same two-column shape as .awards li: one block on the left, the period on
+   the right. .edu-body exists to keep the child count at two — a third grid
+   child gets its own row and the period drops below the entry. */
 .edu li{ display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; }
-.edu-degree{ color: var(--ink); font-size: .92rem; }
+.edu-degree{ display: block; color: var(--ink); font-size: .92rem; }
 .edu-where{ display: block; font-size: .82rem; color: var(--muted); }
 
 /* ── collapsed presentations ──────────────────────────────── */

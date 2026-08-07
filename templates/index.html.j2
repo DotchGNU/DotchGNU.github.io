@@ -139,10 +139,15 @@
     <h2>Education</h2>
     <ul class="edu">
       {% for e in education %}
+      {# Two grid children, never three: the degree and the school are one
+         block on the left, the period sits on the right. A third child here
+         would be pushed onto its own row, which is what used to happen. #}
       <li>
-        <span class="edu-degree">{{ e.degree }}</span>
-        <span class="edu-where">
-          {{ e.dept }} · {{ e.school }}{% if e.advisor %} · Advisor: {{ e.advisor }}{% endif %}{% if e.note %} · {{ e.note }}{% endif %}
+        <span class="edu-body">
+          <span class="edu-degree">{{ e.degree }}</span>
+          <span class="edu-where">
+            {{ e.dept }} · {{ e.school }}{% if e.advisor %} · Advisor: {{ e.advisor }}{% endif %}{% if e.note %} · {{ e.note }}{% endif %}
+          </span>
         </span>
         <time>{{ e.period }}</time>
       </li>
