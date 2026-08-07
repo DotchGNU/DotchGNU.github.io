@@ -9,7 +9,7 @@ Requires:           PyYAML, Jinja2
 # Leave CUSTOM_DOMAIN empty until gwdkim.com is registered AND its DNS points
 # at GitHub Pages. Writing a CNAME for a domain you do not yet control makes
 # GitHub redirect <user>.github.io to it, which takes the site offline.
-CUSTOM_DOMAIN = ""            # -> "gwdkim.com" once DNS is live
+CUSTOM_DOMAIN = "gwdkim.com"  # DNS verified live 2026-08-07; see README before changing
 DATA_FILES = ["site", "publications", "resources", "awards", "talks", "education"]
 # ── logic (below uses only the values above) ────────────────────────────
 
