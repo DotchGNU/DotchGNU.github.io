@@ -145,7 +145,11 @@
       <li>
         <span class="edu-body">
           <span class="edu-degree"><strong>{{ e.degree }}</strong>{% if e.field %}, {{ e.field }}{% endif %}</span>
-          <span class="edu-line">{% if e.dept %}{{ e.dept }}, {% endif %}{{ e.school }}</span>
+          <span class="edu-line">
+            {%- if e.dept_url %}<a href="{{ e.dept_url }}">{% endif -%}
+            {% if e.dept %}{{ e.dept }}, {% endif %}{{ e.school }}
+            {%- if e.dept_url %}</a>{% endif -%}
+          </span>
           {% if e.advisor %}<span class="edu-line">Advisor: {{ e.advisor }}</span>{% endif %}
           {% if e.note %}<span class="edu-line">{{ e.note }}</span>{% endif %}
         </span>

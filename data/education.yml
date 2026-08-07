@@ -1,8 +1,10 @@
 # `degree` is bold on the page, `field` is not — hence two keys rather than one
-# string split at a comma.
+# string split at a comma. `dept_url` links the affiliation line without
+# colouring it; see .edu-line a in style.css.
 - degree:  "Ph.D. Candidate"
   field:   "Nano-Bio-Information Technology Convergence"
   dept:    "KU-KIST Graduate School of Converging Science and Technology"
+  dept_url: "https://kukistschool.korea.ac.kr/eng/main/main.html"
   school:  "Korea University"
   period:  "2021–"
   advisor: "Sung Wook Chi"
@@ -10,6 +12,7 @@
 - degree:  "M.S."
   field:   "Life Sciences"
   dept:    "Department of Life Sciences"
+  dept_url: "https://ls.korea.edu/ls_en/index.do"
   school:  "Korea University"
   period:  "2021"
   advisor: "Sung Wook Chi"
@@ -18,5 +21,6 @@
 - degree:  "B.S."
   field:   "Life Sciences"
   dept:    "Division of Life Sciences, College of Life Sciences and Biotechnology"
+  dept_url: "https://ls.korea.edu/ls_en/index.do"
   school:  "Korea University"
   period:  "2020"

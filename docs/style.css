@@ -228,6 +228,13 @@ a.tag:hover{ border-color: var(--accent); }
 /* One .edu-line per fact — school, advisor, note — each on its own row.
    Named for what it is rather than what it holds: "where" stopped being
    true once the advisor and the note moved into it. */
+/* Affiliation links carry no colour: the accent is reserved for the one place
+   it means something (see .me), and three coloured lines here would drown it.
+   An underline on hover and focus keeps them findable without it — a link with
+   no affordance at all is one nobody clicks. */
+.edu-line a{ color: inherit; border-bottom: none; }
+.edu-line a:hover{ border-bottom: 1px solid currentColor; }
+.edu-line a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 .edu-line{ display: block; font-size: .82rem; color: var(--muted); line-height: 1.5; }
 
 /* ── collapsed presentations ──────────────────────────────── */
