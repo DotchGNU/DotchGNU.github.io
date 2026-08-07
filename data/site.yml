@@ -7,9 +7,10 @@ name:   Geun-Woo D. Kim
 me:     "Kim GW. D."
 
 # Written out in full above the profile links, not hidden behind a mailto link.
+# Keep this to ONE address: the masthead puts the name and this block on the
+# same line, and two addresses push the profile links onto a second row.
 emails:
   - gwpia0409@gmail.com
-  - gwpia0409@korea.ac.kr
 
 # Shown under the e-mail line, in this order.
 links:
