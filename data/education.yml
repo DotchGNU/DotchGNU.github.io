@@ -9,6 +9,7 @@
 
 - degree:  "M.S."
   field:   "Life Sciences"
+  dept:    "Department of Life Sciences"
   school:  "Korea University"
   period:  "2021"
   advisor: "Sung Wook Chi"
@@ -16,5 +17,6 @@
 
 - degree:  "B.S."
   field:   "Life Sciences"
+  dept:    "Division of Life Sciences, College of Life Sciences and Biotechnology"
   school:  "Korea University"
   period:  "2020"
