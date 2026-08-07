@@ -11,6 +11,7 @@
   --muted:        #82757A;
   --rule:         #E6DEE0;
   --bg:           #FFFFFF;
+  --panel:        #F9F4F5;   /* bio ground — the same red bias as the greys */
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -25,6 +26,7 @@
     --muted:        #968A8E;
     --rule:         #362B2E;
     --bg:           #141011;
+    --panel:        #1D1719;
   }
 }
 
@@ -113,9 +115,22 @@ a:focus-visible{ outline: 2px solid var(--crimson); outline-offset: 3px; border-
   font-size: .82rem;
 }
 
-/* ~68 characters per line at this size — long enough to hold a thought,
-   short enough that the eye finds the next line without hunting. */
-.bio{ display: flex; flex-direction: column; gap: .75rem; max-width: 34rem; }
+/* The bio sits on a faint panel so the page reads in two parts: an
+   introduction, then the record. The negative inline margin cancels the
+   padding, so the text keeps the same left edge as every section below it —
+   only the tint extends past the column. Measure stays ~68 characters.
+   To drop the panel, delete background/padding/margin-inline and nothing
+   else changes. */
+.bio{
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  max-width: 34rem;
+  background: var(--panel);
+  padding: 1.2rem 1.35rem;
+  margin-inline: -1.35rem;
+  border-radius: 2px;
+}
 .bio p{ margin: 0; }
 
 /* ── sections ─────────────────────────────────────────────── */
@@ -225,6 +240,8 @@ footer{
   .contact{ align-items: flex-start; top: 0; }
   .emails{ text-align: left; }
   .links{ justify-content: flex-start; }
+  /* Narrower page padding, so the panel's overhang shrinks with it. */
+  .bio{ padding: 1rem 1.15rem; margin-inline: -1.15rem; }
   .awards li, .edu li{ grid-template-columns: 1fr; gap: .15rem; }
   .awards time, .edu time{ order: -1; }
 }
