@@ -2,18 +2,19 @@
 # status: published | in-press
 # doi:    bare DOI, no https:// prefix. Omit if none.
 #
-# `authors` is the display string. Long lists are shortened with "…" but the
-# author's own name is always kept visible — build.py colours it automatically.
+# `authors` is the display string, and it lists everyone. Do not abbreviate with
+# "et al." or "…": a name left off a page is a person left off it. build.py
+# colours the site owner's name automatically.
 
 - title:   "Dysregulated m6A deposition via compensatory arginine methylation primes premalignancy in metabolic dysfunction-associated steatotic liver disease"
-  authors: "Kim GW. D.*, Choi D.*, Kim S.-Y.*, … Chi S. W.#, and Koo S.-H.#"
+  authors: "Kim GW. D.*, Choi D.*, Kim S.-Y.*, Jeong H., Kang G., Eom S. J., Eom S., Lee H.-S., Yang I., Sung J. K., Nam K. T., Park Y. N., Chi S. W.#, and Koo S.-H.#"
   venue:   "Science Advances"
   year:    2026
   role:    first
   status:  in-press
 
 - title:   "Abasic CRISPR RNAs inherently harness fidelity of SpCas9 for genome editing"
-  authors: "Gu D.*, Kim GW. D.*, Park M., … Jang E.-S., and Chi S. W."
+  authors: "Gu D.*, Kim GW. D.*, Park M., Park A. D., Lee H.-S., Eom S., Weon H., Park J., Lee J., Ahn S. H., Oh H., Kim J., Kim S. H., Seong N., Hur J. K., Jang E.-S., and Chi S. W."
   venue:   "Nature Chemical Biology"
   year:    2026
   role:    first
@@ -29,7 +30,7 @@
   doi:     "10.1093/bioinformatics/btag568"
 
 - title:   "Excessive epithelial mechanosensation drives nociceptive innervation and chronic bladder pain via the PIEZO1-SLC7A11-glutamate axis"
-  authors: "Kim M. J., Noh J. H., Lee H. Y., … Kim GW. D., … Chi S. W., and Choi H. W."
+  authors: "Kim M. J., Noh J. H., Lee H. Y., Lee B., Park A. D., Oh H., Kim GW. D., Lee H., Oh Y., Hwang H., Kim C., Lee H., Li X., Oh M. M., Lim D., Abraham S. N., Cho Y., Chi S. W., and Choi H. W."
   venue:   "Cell"
   year:    2026
   role:    co
@@ -37,7 +38,7 @@
   doi:     "10.1016/j.cell.2026.05.049"
 
 - title:   "Widespread 8-oxoguanine modifications of miRNA seeds differentially regulate redox-dependent cancer development"
-  authors: "Eom S.*, Peak J.*, Park J.*, Ahn S. H.*, … Kim GW. D., … Jang E.-S. and Chi S. W."
+  authors: "Eom S.*, Peak J.*, Park J.*, Ahn S. H.*, Cho Y. K., Jeong Y., Lee H.-S., Lee J., Ignatova E., Lee S. E., Hong Y., Gu D., Kim GW. D., Lee D. C., Hahm J. Y., Jeong J., Choi D., Jang E.-S. and Chi S. W."
   venue:   "Nature Cell Biology"
   detail:  "25, 1369–1383"
   year:    2023
@@ -46,7 +47,7 @@
   doi:     "10.1038/s41556-023-01209-6"
 
 - title:   "Position-specific oxidation of miR-1 encodes cardiac hypertrophy"
-  authors: "Seok H., Lee H., Lee S., Ahn S. H., Lee H.-S., Kim GW. D., … Jang E.-S., and Chi S. W."
+  authors: "Seok H., Lee H., Lee S., Ahn S. H., Lee H.-S., Kim GW. D., Peak J., Park J., Cho Y. K., Jeong Y., Gu D., Jeong Y., Eom S., Jang E.-S., and Chi S. W."
   venue:   "Nature"
   detail:  "584, 279–285"
   year:    2020

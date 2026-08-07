@@ -10,7 +10,7 @@
 
 - kind:    poster
   title:   "Deep learning-based design of bio-inspired abasic gRNAs for specific CRISPR-Cas9 genome editing"
-  authors: "Geun-Woo D. Kim*, Dowoon Gu*, … Sung Wook Chi"
+  authors: "Geun-Woo D. Kim*, Dowoon Gu*, Alexander Doh Park, Mingyo Park, Hye-Sook Lee, Haban Weon, Jongyeun Park, and Sung Wook Chi"
   venue:   "Keystone Symposia 2026 — Precision Genome Engineering"
   year:    2026
 
@@ -23,7 +23,7 @@
 
 - kind:    poster
   title:   "Abasic CRISPR RNAs inherently harness fidelity of SpCas9 for genome editing"
-  authors: "Geun-Woo D. Kim*, Dowoon Gu*, … Sung Wook Chi"
+  authors: "Geun-Woo D. Kim*, Dowoon Gu*, Alexander Doh Park, Hye-Sook Lee, Haban Weon, Jongyeun Park, Jung Lee, Junho K. Hur, and Sung Wook Chi"
   venue:   "BIOINFO 2024 — Korean Society for Bioinformatics"
   year:    2024
   note:    "Excellent Poster Presentation"
@@ -36,24 +36,24 @@
 
 - kind:    poster
   title:   "Redox-mediated redirection of miRNA target recognition in cardiac hypertrophy"
-  authors: "Heeyoung Seok, Haejeong Lee, … Geun-Woo D. Kim, … Sung Wook Chi"
+  authors: "Heeyoung Seok, Haejeong Lee, Sohyun Lee, Seung Hyun Ahn, Hye-Sook Lee, Geun-Woo D. Kim, Jongjin Peak, Jongyeun Park, You Kyung Cho, Yeojin Jeong, Dowoon Gu, Yeahji Jeong, Sangkyeong Eom, Eun-Sook Jang, Sung Wook Chi"
   venue:   "KSMCB Winter Conference"
   year:    2020
 
 - kind:    poster
   title:   "Function of miRNA-induced cardiac remodeling for asphyxial death"
-  authors: "Geun-Woo D. Kim, Sohyun Park, Sung Wook Chi"
+  authors: "Kim GW. D., Park S, Chi SW"   # CV 원문 그대로. Park S 의 이름은 미확인
   venue:   "Undergraduate poster session, Division of Life Sciences, Korea University (fall)"
   year:    2019
 
 - kind:    poster
   title:   "Function of miRNA-induced cardiac remodeling for asphyxial death"
-  authors: "Geun-Woo D. Kim, Sohyun Park, Sung Wook Chi"
+  authors: "Kim GW. D., Park S, Chi SW"   # CV 원문 그대로. Park S 의 이름은 미확인
   venue:   "Undergraduate poster session, Division of Life Sciences, Korea University (spring)"
   year:    2019
 
 - kind:    poster
   title:   "Ectopic induction of noncanonical target repression of miR-1 in mouse heart develops cardiac hypertrophy"
-  authors: "Sohyun Lee, Heeyoung Seok, … Geun-Woo D. Kim, Sung Wook Chi"
+  authors: "Lee S, Seok HY, Ahn SH, Lee H, Jeong Y, Kim GW, Chi SW"
   venue:   "RNA Biology, Cold Spring Harbor Asia Conference"
   year:    2018
