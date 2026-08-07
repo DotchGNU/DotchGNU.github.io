@@ -11,18 +11,19 @@
 <body>
 <main>
 
+  {# Grid, not flex: the profile links must sit on the name's baseline with the
+     e-mail line above them. A column flex box exposes only its FIRST line's
+     baseline, which would align the e-mail instead. Placement is in style.css. #}
   <header class="masthead">
     <h1>{{ site.name }}</h1>
-    <div class="contact">
-      {% if site.emails %}
-      <p class="emails">Email : {{ site.emails | join(' / ') }}</p>
-      {% endif %}
-      <nav class="links" aria-label="Profiles">
-        {% for link in site.links %}
-        <a href="{{ link.url }}"{% if link.url.startswith('http') %} rel="me noopener"{% endif %}>{{ link.label }}</a>
-        {% endfor %}
-      </nav>
-    </div>
+    {% if site.emails %}
+    <p class="emails">Email : {{ site.emails | join(' / ') }}</p>
+    {% endif %}
+    <nav class="links" aria-label="Profiles">
+      {% for link in site.links %}
+      <a href="{{ link.url }}"{% if link.url.startswith('http') %} rel="me noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </nav>
   </header>
 
   {% if site.bio %}
