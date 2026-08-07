@@ -21,7 +21,7 @@
   status:  published
   doi:     "10.1038/s41589-026-02139-8"
 
-- title:   "abCRISPR: deep learning-based design of abasic gRNA sequences for specific CRISPR-Cas genome editing"
+- title:   "abCRISPR: deep learning-based design of abasic gRNA sequences for specific CRISPR-Cas9 genome editing"
   authors: "Kim GW. D., Gu D., Park M. and Chi S. W."
   venue:   "Bioinformatics"
   year:    2026
