@@ -223,7 +223,10 @@ a.tag:hover{ border-color: var(--accent); }
    child gets its own row and the period drops below the entry. */
 .edu li{ display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; }
 .edu-degree{ display: block; color: var(--ink); font-size: .92rem; }
-.edu-where{ display: block; font-size: .82rem; color: var(--muted); }
+/* One .edu-line per fact — school, advisor, note — each on its own row.
+   Named for what it is rather than what it holds: "where" stopped being
+   true once the advisor and the note moved into it. */
+.edu-line{ display: block; font-size: .82rem; color: var(--muted); line-height: 1.5; }
 
 /* ── collapsed presentations ──────────────────────────────── */
 details summary{
