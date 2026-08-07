@@ -116,19 +116,17 @@ a:focus-visible{ outline: 2px solid var(--crimson); outline-offset: 3px; border-
 }
 
 /* The bio sits on a faint panel so the page reads in two parts: an
-   introduction, then the record. The negative inline margin cancels the
-   padding, so the text keeps the same left edge as every section below it —
-   only the tint extends past the column. Measure stays ~68 characters.
-   To drop the panel, delete background/padding/margin-inline and nothing
-   else changes. */
+   introduction, then the record. The panel spans the content column exactly,
+   so its right edge lands on the same line as the e-mail above it and the
+   section rules below it. No max-width: the text runs the full column, about
+   72 characters — wide, but the alignment is what carries the page.
+   To drop the panel, delete background/padding and nothing else changes. */
 .bio{
   display: flex;
   flex-direction: column;
   gap: .75rem;
-  max-width: 34rem;
   background: var(--panel);
   padding: 1.2rem 1.35rem;
-  margin-inline: -1.35rem;
   border-radius: 2px;
 }
 .bio p{ margin: 0; }
@@ -240,8 +238,7 @@ footer{
   .contact{ align-items: flex-start; top: 0; }
   .emails{ text-align: left; }
   .links{ justify-content: flex-start; }
-  /* Narrower page padding, so the panel's overhang shrinks with it. */
-  .bio{ padding: 1rem 1.15rem; margin-inline: -1.15rem; }
+  .bio{ padding: 1rem 1.1rem; }
   .awards li, .edu li{ grid-template-columns: 1fr; gap: .15rem; }
   .awards time, .edu time{ order: -1; }
 }
