@@ -1,17 +1,20 @@
-# Degree first, then field — parallel with the M.S. and B.S. lines below.
-# "Ph.D. Program" named the programme rather than the degree, which broke that.
-- degree:  "Ph.D. Candidate, Nano-Bio-Information Technology Convergence"
+# `degree` is bold on the page, `field` is not — hence two keys rather than one
+# string split at a comma.
+- degree:  "Ph.D. Candidate"
+  field:   "Nano-Bio-Information Technology Convergence"
   dept:    "KU-KIST Graduate School of Converging Science and Technology"
   school:  "Korea University"
   period:  "2021–"
   advisor: "Sung Wook Chi"
 
-- degree:  "M.S., Life Sciences"
+- degree:  "M.S."
+  field:   "Life Sciences"
   school:  "Korea University"
   period:  "2021"
   advisor: "Sung Wook Chi"
   note:    "completed in three semesters"
 
-- degree:  "B.S., Life Sciences"
+- degree:  "B.S."
+  field:   "Life Sciences"
   school:  "Korea University"
   period:  "2020"

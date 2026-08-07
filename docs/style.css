@@ -222,8 +222,9 @@ a.tag:hover{ border-color: var(--accent); }
    the right. .edu-body exists to keep the child count at two — a third grid
    child gets its own row and the period drops below the entry. */
 .edu li{ display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; }
-/* Bold, as on the CV — the degree is the line the eye should land on. */
-.edu-degree{ display: block; color: var(--ink); font-size: .92rem; font-weight: 600; }
+/* Only the degree itself is bold; the field that follows is not. */
+.edu-degree{ display: block; color: var(--ink); font-size: .92rem; }
+.edu-degree strong{ font-weight: 600; }
 /* One .edu-line per fact — school, advisor, note — each on its own row.
    Named for what it is rather than what it holds: "where" stopped being
    true once the advisor and the note moved into it. */
