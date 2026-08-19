@@ -54,3 +54,9 @@ bio_links:
 
 # Footer
 updated: "August 2026"
+
+# Cloudflare Web Analytics. Paste the token from the dashboard and it turns on;
+# leave it empty and no script is emitted at all, which is the state to return
+# to if the measurement ever stops being worth the one external request.
+# The token is not a secret — it ships in the page source either way.
+analytics_token: "9a6bb6fd8cef487d8c8d3f56131fcf6e"

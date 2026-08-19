@@ -159,6 +159,7 @@ def main():
     print(f"  bio            {len(bio)} paragraph(s)"
           f"{'' if bio else ' — block omitted'}")
     print(f"  custom domain  {CUSTOM_DOMAIN or '(none — serving on github.io)'}")
+    print(f"  analytics      {'Cloudflare beacon' if site.get('analytics_token') else 'none — no external requests'}")
 
 
 if __name__ == "__main__":
