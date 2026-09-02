@@ -8,6 +8,7 @@
   school:  "Korea University"
   period:  "2021–"
   advisor: "Sung Wook Chi"
+  note:    "expected February 2027"
 
 - degree:  "M.S."
   field:   "Life Sciences"
@@ -24,3 +25,4 @@
   dept_url: "https://ls.korea.edu/ls_en/index.do"
   school:  "Korea University"
   period:  "2020"
+  note:    "Undergraduate researcher: Sung Wook Chi lab (2018–2020), Bong-June Yoon lab (2015–2016)"
