@@ -17,8 +17,10 @@ emails:
 
 # Shown under the e-mail line, in this order.
 links:
-  - label: Google Scholar Profile
+  - label: Google Scholar
     url:   "https://scholar.google.com/citations?user=lsfAf-oAAAAJ&hl=en"
+  - label: LinkedIn
+    url:   "https://www.linkedin.com/in/gwdkim"
   - label: ORCID
     url:   "https://orcid.org/0000-0003-0161-6707"
   - label: CV (PDF)
