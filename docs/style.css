@@ -142,6 +142,7 @@ a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-r
 }
 .bio p{ margin: 0; }
 
+
 /* ── sections ─────────────────────────────────────────────── */
 section{ display: flex; flex-direction: column; gap: .9rem; }
 
@@ -197,6 +198,30 @@ a.tag:hover{ border-color: var(--accent); }
 
 /* Explains the * and # markers carried inside the author strings. */
 .footnote{ margin: .35rem 0 0; font-size: .76rem; color: var(--muted); }
+
+/* ── writings ─────────────────────────────────────────────── */
+/* English gloss beside a Korean title. Inline, so it reads as a subtitle
+   rather than as a second entry; it wraps to its own line only when the
+   title runs out of room. */
+.subtitle{ font-size: .82rem; font-weight: 400; color: var(--muted); }
+
+/* Installments of a series. Indented under the entry that links the index,
+   so the group reads as one item rather than three. */
+.parts{ margin: .5rem 0 0 .9rem; padding: 0; list-style: none;
+        display: flex; flex-direction: column; gap: .4rem; }
+.parts li{ font-size: .87rem; color: var(--body); line-height: 1.5; }
+.parts .subtitle{ display: block; font-size: .78rem; }
+
+/* Affiliation link that carries no colour — the accent is reserved for the
+   one place it means something (.me). Same treatment as .edu-line a. */
+.plain{
+  color: inherit;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.plain:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ── awards ───────────────────────────────────────────────── */
 .awards{ margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: .55rem; }

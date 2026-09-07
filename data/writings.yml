@@ -1,0 +1,40 @@
+# Popular-science writing for BRIC (Biological Research Information Center).
+#
+# These pieces are in Korean and their titles stay in Korean — a translated
+# title is not the title, and a reader who follows the link lands on Korean
+# prose either way. `subtitle` carries the English so the rest of the page
+# still reads as one language, and the template prints an "in Korean" tag so
+# nobody clicks through expecting English.
+#
+# Grouped: the group heading renders as an <h3>, the same shape Publications
+# uses for First-author / Co-authored.
+#
+# `parts` is for a series still being written. The entry links the series
+# index, so a new installment needs three lines here and nothing else — the
+# index URL never changes.
+
+- group: "연재 Series"
+  entries:
+    - title:    "융합 연구의 매력"
+      subtitle: "The Appeal of Convergence Research"
+      venue:    "BRIC BioSeries"
+      year:     "2026–"
+      kind:     "series"
+      links:
+        - {label: "read", url: "https://www.ibric.org/bric/trend/bio-series.do?mode=series_list&articleNo=10036370"}
+      parts:
+        - title:    "1. 융합 연구는 왜 시작되는가: 새로운 질문은 경계에서 나온다"
+          subtitle: "Why convergence research starts: new questions come from the boundaries"
+          url:      "https://www.ibric.org/bric/trend/bio-series.do?mode=series_view&newsArticleNo=10036371&articleNo=10036370&beforeMode=series_list"
+        - title:    "2. 경계에서 태어난 학문 분자생물학: 유전물질을 찾고 유전체를 읽기까지"
+          subtitle: "Molecular biology, a field born on a boundary: from finding the genetic material to reading the genome"
+          url:      "https://www.ibric.org/bric/trend/bio-series.do?mode=series_view&newsArticleNo=10047923&articleNo=10036370&beforeMode=series_list"
+
+- group: "동향리포트 Report"
+  entries:
+    - title:    "학회참관기 <KEYSTONE SYMPOSIA 2026 Precision Genome Engineering : From Basic Mechanisms to Applications>"
+      venue:    "BRIC BioReport"
+      year:     "2026"
+      kind:     "report"
+      links:
+        - {label: "read", url: "https://www.ibric.org/bric/trend/bio-report.do?mode=view&articleNo=10029032"}

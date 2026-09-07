@@ -10,7 +10,8 @@ Requires:           PyYAML, Jinja2
 # at GitHub Pages. Writing a CNAME for a domain you do not yet control makes
 # GitHub redirect <user>.github.io to it, which takes the site offline.
 CUSTOM_DOMAIN = "gwdkim.com"  # DNS verified live 2026-08-07; see README before changing
-DATA_FILES = ["site", "publications", "resources", "awards", "talks", "education"]
+DATA_FILES = ["site", "publications", "resources", "awards", "talks", "writings",
+              "education", "leadership"]
 # ── logic (below uses only the values above) ────────────────────────────
 
 import hashlib
@@ -133,6 +134,7 @@ def main():
     rendered = env.get_template("index.html.j2").render(
         site=site, bio=bio, first=first, co=co, talks=talks, css_v=css_v,
         resources=data["resources"], awards=data["awards"], education=data["education"],
+        writings=data["writings"], leadership=data["leadership"],
     )
 
     rendered = open_externally(rendered)
@@ -154,6 +156,9 @@ def main():
     print(f"  resources      {len(data['resources'])}")
     print(f"  awards         {len(data['awards'])}")
     print(f"  presentations  {len(talks)}")
+    print(f"  writings       {sum(len(g.get('entries') or []) for g in data['writings'])}"
+          f" in {len(data['writings'])} group(s)")
+    print(f"  leadership     {len(data['leadership'])}")
     print(f"  external links {rendered.count('target=\"_blank\"')} open in a new tab")
     print(f"  stylesheet     style.css?v={css_v}")
     print(f"  bio            {len(bio)} paragraph(s)"

@@ -78,23 +78,6 @@
   </section>
   {% endif %}
 
-  {% if resources %}
-  <section>
-    <h2>Resources</h2>
-    <ul class="entries">
-      {% for r in resources %}
-      <li>
-        <p class="title">{{ r.name }}</p>
-        <p class="venue">
-          {{ r.blurb }}
-          {% for l in r.links %}<a class="tag" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
   {% if awards %}
   <section>
     <h2>Honors and Awards</h2>
@@ -130,6 +113,77 @@
         {% endfor %}
       </ul>
     </details>
+  </section>
+  {% endif %}
+
+  {% if resources %}
+  <section>
+    <h2>Resources</h2>
+    <ul class="entries">
+      {% for r in resources %}
+      <li>
+        <p class="title">{{ r.name }}</p>
+        <p class="venue">
+          {{ r.blurb }}
+          {% for l in r.links %}<a class="tag" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if writings %}
+  {# Korean-language pieces. The title stays in Korean because a translated
+     title is not the title; `subtitle` carries the English beside it, and the
+     "in Korean" tag warns before the click rather than after it. #}
+  <section>
+    <h2>Writings</h2>
+    {% for g in writings %}
+    <h3>{{ g.group }}</h3>
+    <ul class="entries">
+      {% for w in g.entries %}
+      <li>
+        <p class="title">{{ w.title }}{% if w.subtitle %} <span class="subtitle">{{ w.subtitle }}</span>{% endif %}</p>
+        <p class="venue">
+          {{ w.venue }} ({{ w.year }})
+          {% if w.kind %}<span class="tag tag--quiet">{{ w.kind }}</span>{% endif %}
+          <span class="tag tag--quiet">in Korean</span>
+          {% for l in w.links %}<a class="tag" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+        </p>
+        {% if w.parts %}
+        <ul class="parts">
+          {% for p in w.parts %}
+          <li>
+            {{ p.title }} <a class="tag" href="{{ p.url }}">read</a>
+            {% if p.subtitle %}<span class="subtitle">{{ p.subtitle }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if leadership %}
+  {# Same two grid children as the awards list: body on the left, year on the
+     right. The video tags are the record of what the role produced. #}
+  <section>
+    <h2>Leadership and Service</h2>
+    <ul class="awards">
+      {% for a in leadership %}
+      <li>
+        <span class="award-body">
+          {{ a.role }}, {% if a.org_url %}<a class="plain" href="{{ a.org_url }}">{{ a.org }}</a>{% else %}{{ a.org }}{% endif %}{% if a.school %}, {{ a.school }}{% endif %}{{ ' ' }}
+          {% for l in a.links %}<a class="tag" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+        </span>
+        <time>{{ a.year }}</time>
+      </li>
+      {% endfor %}
+    </ul>
   </section>
   {% endif %}
 

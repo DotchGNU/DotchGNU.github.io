@@ -1,0 +1,31 @@
+# Same two-column shape as awards.yml: what it was on the left, the year on
+# the right.
+#
+# `org_url` links the organisation without colouring it, the way education.yml
+# links a department.
+#
+# `links` renders as small tags. The videos are the record of what the role
+# actually produced, which a job title alone does not carry.
+#
+# "32nd" is how the Korean 「32대」 goes into English: the ordinal belongs to
+# the officeholder, not to the body.
+
+- role:    "32nd President"
+  org:     "Student Club-Union Government"
+  org_url: "https://www.koreauniv.club/"
+  school:  "Korea University"
+  year:    "2015"
+  links:
+    - {label: "video 1", url: "https://www.youtube.com/watch?v=wqJY3k6JKOI"}
+    - {label: "video 2", url: "https://www.youtube.com/watch?v=Su2NnPbiog4"}
+    - {label: "video 3", url: "https://www.youtube.com/watch?v=qFhYyPGjrbU"}
+
+- role:  "Representative"
+  org:   "Korea University Fall-Festival Task Force"
+  year:  "2014"
+  links:
+    - {label: "video", url: "https://www.youtube.com/watch?v=Qd3dWVvCk84"}
+
+- role:  "Military Service (Combat Medic)"
+  org:   "Republic of Korea Army"
+  year:  "2016–18"
